@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>גלריית גזעים-הכל לכלב</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Segoe UI;
+      }
+      /*Header style-----*/
+
+      header {
+        height: 200px;
+        background-image: linear-gradient(45deg, #3f006e, #aa00dc);
+        border-radius: 0 0 25px 25px;
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Segoe UI;
+        position: relative;
+        font-size: 70px;
+
+        text-align: center;
+        color: white;
+      }
+      .secondaryTitle-header {
+        text-align: center;
+        color: white;
+        font-family: Segoe UI;
+        font-weight: normal;
+        font-size: 25px;
+      }
+
+      /*Style of menu-----*/
+      .list-menu {
+        list-style: none;
+        font-size: 20px;
+        font-family: Segoe UI;
+        color: white;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+      }
+      .list-menu a {
+        font-size: 25px;
+        padding: 25px;
+        text-decoration: none;
+        color: white;
+      }
+      .list-menu a:hover {
+        transition: 1s;
+        font-size: 30px;
+        border-bottom: 1px solid white;
+      }
+      /* END Style of menu + Header-----*/
+      .title-ourGalery {
+        text-align: center;
+        color: #ee2d60;
+        direction: rtl;
+        margin: 20px;
+        font-family: Segoe UI;
+        font-weight: bold;
+      }
+
+      /*  Video-style-----*/
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(230, 230, 230);
+        margin: 20px;
+        padding: 15px;
+      }
+      .video-container iframe  {
+        height: 50vh;
+        width: 90%;
+        border-radius: 15px;
+      }
+      
+  @media screen and (max-width: 536px) {
+
+    .list-menu a {
+       font-size: 20px;
+       padding: 15px;
+  }
+    .main-title {
+      margin-top: 20px;
+      font-size: 50px;
+  }
+      }
+      /* END Video-style-----*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="list-menu">
+        <li class="list-item"><a href="ConatctUs.html">צור קשר</a></li>
+        <li class="list-item"><a href="Galery.html">גלריה </a></li>
+        <li class="list-item"><a href="About.html">אודות</a></li>
+        <li class="list-item"><a href="articels.html">מאמרים</a></li>
+        <li class="list-item"><a href="index.html">דף הבית</a></li>
+      </ul>
+      <h1 class="main-title">
+        הכל לכלב
+      </h1>
+      <h3 class="secondaryTitle-header">גלריה</h3>
+    </header>
+    <div class="title-ourGalery">
+      <h1>גלריית כלבים</h1>
+    </div>
+    <div class="video-container">
+      
+        <iframe 
+          width="800"
+          height="400"
+          src="https://www.youtube.com/embed/GruPNmCb-fQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </video>
+    </div>
+    <div class="container">
+      <div class="imageGalery"></div>
+    </div>
+  </body>
+</html>

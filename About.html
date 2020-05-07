@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אודות-הכל לכלב</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /*Header style-----*/
+
+      header {
+        height: 200px;
+        background-image: linear-gradient(45deg, #3f006e, #aa00dc);
+        border-radius: 0 0 25px 25px;
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Segoe UI;
+
+        position: relative;
+        font-size: 70px;
+        text-align: center;
+        color: white;
+      }
+      .secondaryTitle-header {
+        text-align: center;
+        color: white;
+        font-family: Segoe UI;
+        font-weight: normal;
+        font-size: 25px;
+      }
+
+      /*Style of menu-----*/
+      .list-menu {
+        list-style: none;
+        font-size: 20px;
+        font-family: Segoe UI;
+        color: white;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+      }
+      .list-menu a {
+        font-size: 25px;
+        padding: 30px;
+        text-decoration: none;
+        color: white;
+      }
+      .list-menu a:hover {
+        transition: 1s;
+        font-size: 30px;
+        border-bottom: 1px solid white;
+      }
+      /* END Style of menu + Header-----*/
+
+      .title-importanToKnow {
+        text-align: center;
+        color: #ee2d60;
+        direction: rtl;
+        margin: 20px;
+        font-family: Segoe UI;
+        font-weight: bold;
+      }
+      /* Style of cards-----*/
+      .about-us {
+        animation: text 3s 1;
+        border-left: 2px solid#ee2d60;
+        font-weight: bold;
+        font-family: Segoe UI;
+        color: #400070;
+        font-size: 45px;
+        text-align: right;
+        margin: 30px;
+      }
+      .p1 {
+        direction: rtl;
+        font-family: Segoe UI;
+        color: #160126;
+        text-align: right;
+        margin: 25px;
+        padding: 10px;
+        font-size: 18px;
+        background-color: rgb(238, 238, 238);
+      }
+      .h2-speed {
+        border-left: 2px solid#ee2d60;
+        font-weight: bold;
+        font-family: Segoe UI;
+        color: #400070;
+        font-size: 40px;
+        text-align: right;
+        margin: 30px;
+        animation: text 2s 1;
+      }
+      /* ANIMATION of cards-----*/
+
+      @keyframes text {
+        0% {
+          margin-top: -40px;
+          color: #aa00dc;
+        }
+        30% {
+          letter-spacing: 3px;
+        }
+      }
+      /*  END ANIMATION of cards-----*/
+
+      .p2 {
+        direction: rtl;
+        font-family: Segoe UI;
+        color: #160126;
+        text-align: right;
+        margin: 30px;
+        padding: 10px;
+        font-size: 18px;
+        background-color: rgb(238, 238, 238);
+      }
+      .image-dog {
+        position: fixed;
+        bottom: 0px;
+      }
+      .image-dog img {
+        height: 300px;
+        opacity: 0.8;
+        float: left;
+      }
+      .container {
+        background-color: rgb(247, 247, 247);
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        margin-top: 2em;
+        justify-content: space-evenly;
+        display: flex;
+      }
+      .abouyUsDIV,
+      .speedDIV,
+      .reliabilityDIV {
+        background-color: white;
+        padding: 1em;
+        width: 350px;
+        border-radius: 10px;
+        margin: 10px;
+        border: 1px solid black;
+      }
+      .aboutUs-img {
+        animation: text 3s 1;
+        position: absolute;
+        height: 40px;
+        top: 3.6em;
+        left: 4.5em;
+      }
+      .speed-img,
+      .reliability-img {
+        position: absolute;
+        height: 50px;
+        top: 3em;
+        left: 8em;
+        animation: text 3s 1;
+      }
+      .speedDIV,
+      .reliabilityDIV,
+      .abouyUsDIV {
+        position: relative;
+      }
+      /*END Style of cards-----*/
+
+      @media screen and (max-width: 536px) {
+        .image-dog {
+          display: none;
+        }
+        .list-menu a {
+          font-size: 20px;
+          padding: 15px;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+        }
+      }
+      @media screen and (max-width: 711px) {
+        .image-dog {
+          display: none;
+        }
+        .list-menu a {
+          font-size: 20px;
+          padding: 15px;
+        }
+        .main-title h1 {
+          font-size: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="list-menu">
+        <li class="list-item"><a href="ConatctUs.html">צור קשר</a></li>
+        <li class="list-item"><a href="Galery.html">גלריה </a></li>
+        <li class="list-item"><a href="About.html">אודות</a></li>
+        <li class="list-item"><a href="articels.html">מאמרים</a></li>
+        <li class="list-item"><a href="index.html">דף הבית</a></li>
+      </ul>
+      <h1 class="main-title">
+        הכל לכלב
+      </h1>
+      <h3 class="secondaryTitle-header">אודות</h3>
+    </header>
+
+    <div class="title-importanToKnow">
+      <h1>חשוב לדעת</h1>
+    </div>
+
+    <div class="container">
+      <div class="abouyUsDIV">
+        <img class="aboutUs-img" src="/images/info.png" alt="icon of info" />
+        <h2 class="about-us">
+          קצת עלינו
+        </h2>
+        <p class="p1">
+          <b>
+            הכל לכלב הינה חנות עם שלל מוצרים לחיית מחמד שלכם<br />,הכוללת
+            מזון,צעצועים,מוצרי אילוף ועוד
+          </b>
+        </p>
+      </div>
+
+      <div class="speedDIV">
+        <img
+          class="speed-img"
+          src="/images/delivery.png"
+          alt="icon of delivery"
+        />
+        <h2 class="h2-speed">
+          מהירות
+        </h2>
+        <p class="p2">
+          אנו מספקים משלוחים לכל חלקי הארץ<br />
+          בזמן הקצר ביותר עד פתח בית הלקוח!
+        </p>
+      </div>
+
+      <div class="reliabilityDIV">
+        <img
+          class="reliability-img"
+          src="/images/trust.png"
+          alt="icon of trust"
+        />
+        <h2 class="h2-speed">
+          אמינות
+        </h2>
+        <p class="p2">
+          אלפי לקוחות מרוצים עם דירוג של 5 כוכבים <br />לא אהבתם? לא שילמתם!
+        </p>
+      </div>
+    </div>
+    <div class="image-dog">
+      <img src="/images/dogImag.png" alt="image of dog" />
+    </div>
+  </body>
+</html>

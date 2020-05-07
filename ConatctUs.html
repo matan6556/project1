@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>צור קשר-הכל לכלב</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Segoe UI;
+      }
+
+      /*Header style-----*/
+
+      header {
+        height: 200px;
+        background-image: linear-gradient(45deg, #3f006e, #aa00dc);
+        border-radius: 0 0 25px 25px;
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Segoe UI;
+        position: relative;
+        font-size: 70px;
+
+        text-align: center;
+        color: white;
+      }
+      .secondaryTitle-header {
+        text-align: center;
+        color: white;
+        font-family: Segoe UI;
+        font-weight: normal;
+        font-size: 25px;
+      }
+
+      /*Style of menu-----*/
+      .list-menu {
+        list-style: none;
+        font-size: 20px;
+        font-family: Segoe UI;
+        color: white;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+      }
+      .list-menu a {
+        font-size: 25px;
+        padding: 25px;
+        text-decoration: none;
+        color: white;
+      }
+      .list-menu a:hover {
+        transition: 1s;
+        font-size: 30px;
+        border-bottom: 1px solid white;
+      }
+      /* END Style of menu + Header-----*/
+
+      .title-talkToUs {
+        text-align: center;
+        color: #ee2d60;
+        direction: rtl;
+        margin: 20px;
+        font-family: Segoe UI;
+        font-weight: bold;
+      }
+      /* inputs style-----*/
+
+      .inputs-container {
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      input {
+        font-size: 1rem;
+        text-align: center;
+        outline: none;
+        border: 1px solid #3f006e;
+        border-radius: 10px;
+        height: 40px;
+        min-width: 300px;
+        width: 45%;
+        margin: 10px;
+      }
+      #subject {
+        height: 100px;
+      }
+      /*END inputs style-----*/
+
+      .bttn-send {
+        outline: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: white;
+        border-radius: 30px;
+        border: none;
+        background-image: linear-gradient(45deg, #ee2d60, #ff4c6a);
+        height: 35px;
+        width: 25%;
+        margin-top: 5px;
+      }
+      .bttn-send:hover {
+        transform: scale(1.1);
+      }
+      /*aboutUs Container-----*/
+      .aboutUs-container {
+        background-color: rgb(231, 231, 231);
+        height: 30vh;
+      }
+
+      .aboutUs-container p {
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        color: #3f006e;
+        padding: 10px;
+        font-size: 23px;
+        margin: 10px;
+        line-height: 1.6;
+      }
+      /*END ABOUTuS CONTAINER-----*/
+
+      /* popUP style-----*/
+      .popUpContainer {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s;
+      }
+      .popUp-actice {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .popup-content {
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: white;
+        height: 100px;
+        width: 300px;
+        text-align: center;
+        position: relative;
+      }
+      .namePopUp {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ee2d60;
+      }
+      .popup-content button {
+        outline: none;
+        background-color: white;
+        border: 1px solid #3f006e;
+        border-radius: 15px;
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 22%;
+        width: 50%;
+      }
+      .closePopUp {
+        cursor: pointer;
+      }
+      .popup-content button:hover {
+        background-color: #3f006e;
+        color: white;
+      }
+      .popup-content p {
+        text-align: center;
+        color: rgb(151, 151, 151);
+        margin-top: 7px;
+        font-size: 17px;
+      }
+      /*END popUP style-----*/
+
+      @media screen and (max-width: 536px) {
+        .list-menu a {
+          font-size: 20px;
+          padding: 15px;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="list-menu">
+        <li class="list-item"><a href="ConatctUs.html">צור קשר</a></li>
+        <li class="list-item"><a href="Galery.html">גלריה </a></li>
+        <li class="list-item"><a href="About.html">אודות</a></li>
+        <li class="list-item"><a href="articels.html">מאמרים</a></li>
+        <li class="list-item"><a href="index.html">דף הבית</a></li>
+      </ul>
+      <h1 class="main-title">
+        הכל לכלב
+      </h1>
+      <h3 class="secondaryTitle-header">צור קשר</h3>
+    </header>
+    <div class="title-talkToUs">
+      <h1>דברו איתנו</h1>
+    </div>
+
+    <div class="inputs-container">
+      <input
+        class="inputContact"
+        type="text"
+        placeholder="שם מלא"
+        id="nameInput"
+      />
+      <input class="inputContact" type="text" placeholder="טלפון" />
+      <input class="inputContact" type="text" placeholder="דואר אלקטורני" />
+      <input
+        class="inputContact"
+        id="subject"
+        type="text"
+        placeholder="נושא הפנייה"
+      />
+      <button class="bttn-send" onclick="ChangeDisplay()">שלח</button>
+    </div>
+    <div class="aboutUs-container">
+      <p>
+        כתובת: רחוב הרצל <br />
+        טלפון : 08655555<br />
+        פקס:03-655545<br />
+
+        www.facebook.com/spcaisrael<br />
+
+        .שעות פתיחה לקהל המבקרים ימים א-ה: 20:00-8:00 יום ו: 14:00-8:00 שבת:
+        14:00-11:00
+      </p>
+    </div>
+    <div class="popUpContainer">
+      <div class="popup-content">
+        <h1 class="namePopUp">תודה</h1>
+        <p>ניצור איתך קשר בהקדם!</p>
+        <button class="closePopUp">סגור</button>
+      </div>
+    </div>
+
+    <script>
+      var popup = document.querySelector(".popUpContainer");
+      var closePopUp = document.querySelector(".closePopUp");
+
+      var nameInput = document.getElementById("nameInput");
+      var namePopUp = document.querySelector(".namePopUp");
+      var bttnSend = document.querySelector(".bttn-send");
+      var inputContact = document.querySelectorAll(".inputContact");
+
+      //show popUp on send button
+      function ChangeDisplay() {
+        // check if the input value is emptey.
+        if (nameInput.value === "") {
+          alert("הכנס בבקשה שם מלא");
+        } else {
+          popup.classList.add("popUp-actice");
+        }
+      }
+
+      //close popUp on close button
+      closePopUp.addEventListener("click", function () {
+        popup.classList.remove("popUp-actice");
+        namePopUp.textContent = "תודה";
+      });
+
+      bttnSend.addEventListener("click", () => {
+        //insert the nameInput value to popUp
+        namePopUp.textContent += " " + nameInput.value;
+        //reset the inputs value
+        inputContact.forEach((input) => {
+          input.value = "";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מאמרים-הכל לכלב</title>
+
+    <style>
+      * {
+        font-family: Segoe UI;
+        padding: 0;
+        margin: 0;
+      }
+
+      /*Header style-----*/
+
+      header {
+        height: 200px;
+        background-image: linear-gradient(45deg, #3f006e, #aa00dc);
+        border-radius: 0 0 25px 25px;
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Segoe UI;
+        position: relative;
+        font-size: 70px;
+        text-align: center;
+        color: white;
+      }
+      .secondaryTitle-header {
+        text-align: center;
+        color: white;
+        font-family: Segoe UI;
+        font-weight: normal;
+        font-size: 25px;
+      }
+
+      /*Style of menu-----*/
+      .list-menu {
+        list-style: none;
+        font-size: 20px;
+        font-family: Segoe UI;
+        color: white;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+      }
+      .list-menu a {
+        font-size: 25px;
+        padding: 30px;
+        text-decoration: none;
+        color: white;
+      }
+      .list-menu a:hover {
+        transition: 1s;
+        font-size: 30px;
+        border-bottom: 1px solid white;
+      }
+      /* END Style of menu + Header-----*/
+      .title-articles {
+        text-align: center;
+        color: #ee2d60;
+        direction: rtl;
+        margin: 20px;
+        font-family: Segoe UI;
+        font-weight: bold;
+      }
+      /* container Style-----*/
+      .container-articles {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background-color: rgb(247, 247, 247);
+        display: flex;
+        direction: rtl;
+      }
+      /* END container Style-----*/
+
+      /* article Style-----*/
+      .article {
+        margin: 5px;
+        width: 300px;
+        justify-items: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+      }
+      .title-article {
+        animation: text 2s 1;
+        font-weight: bold;
+        font-size: 20px;
+        color: #3f006e;
+        text-align: center;
+      }
+      .image-article img {
+        animation: text 3s 1;
+        height: 200px;
+        border-radius: 15px;
+      }
+      .descreption-article {
+        color: rgb(104, 104, 104);
+        margin: 12px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .bttn-article button {
+        outline: none;
+        cursor: pointer;
+        margin-top: 8px;
+        border-radius: 0px 15px 15px 0;
+        padding: 8px;
+        border: none;
+        background-color: white;
+        color: #ee2d60;
+        font-weight: bold;
+        border: 1px solid #ee2d60;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100px;
+      }
+      .bttn-article button:hover {
+        color: white;
+        background-color: #ee2d60;
+      }
+
+      /* END article Style-----*/
+
+      /* ANIMATION of product-----*/
+      @keyframes text {
+        0% {
+          opacity: 0%;
+        }
+        30% {
+          opacity: 50%;
+        }
+      }
+
+      /* -----------------------------*/
+
+      /*----style of external-link----------*/
+      .container-link {
+        background-color: #e0e0e098;
+        height: 25vh;
+        width: 100%;
+        display: grid;
+        position: absolute;
+        justify-items: center;
+      }
+      .link {
+        text-decoration: none;
+        color: #3f006e;
+        display: flex;
+        align-items: center;
+        margin: 25px;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      /* -----------------------------*/
+
+      /*----Responsiv----------*/
+      @media screen and (max-width: 536px) {
+        .list-menu a {
+          font-size: 20px;
+          padding: 15px;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+        }
+      }
+      /* -----------------------------*/
+
+      /* popUp-article---------*/
+
+      .container-popUp {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.7s;
+      }
+      .container-popUp-active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .popUp-content {
+        width: 85%;
+        height: 50%;
+        max-width: 800px;
+        max-height: 599px;
+        margin: 25px;
+        position: relative;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+      }
+
+      .popUp-content button {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -12px;
+        right: -15px;
+        border: 1px solid rgb(192, 192, 192);
+        background-color: white;
+        padding: 5px;
+        border-radius: 150px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .imageDiv {
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .imageDiv img {
+        width: auto;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+      .textDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 59%;
+        height: 100%;
+        padding: 4rem;
+      }
+      .popUp-title {
+        color: #3f006e;
+        text-align: center;
+      }
+      .popUp-description {
+        margin-top: 20px;
+        direction: rtl;
+
+        line-height: 1.6;
+        font-size: 19px;
+      }
+
+      /* -----------------------------*/
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul class="list-menu">
+        <li class="list-item"><a href="ConatctUs.html">צור קשר</a></li>
+        <li class="list-item"><a href="Galery.html">גלריה </a></li>
+        <li class="list-item"><a href="About.html">אודות</a></li>
+        <li class="list-item"><a href="articels.html">מאמרים</a></li>
+        <li class="list-item"><a href="index.html">דף הבית</a></li>
+      </ul>
+      <h1 class="main-title">
+        הכל לכלב
+      </h1>
+      <h3 class="secondaryTitle-header">מאמרים</h3>
+    </header>
+
+    <div class="title-articles">
+      <h1>המאמרים שלנו</h1>
+    </div>
+
+    <div class="container-articles">
+      <div class="article">
+        <div class="image-article">
+          <img src="/images/image-article1.jpg" alt="image-article1" />
+        </div>
+        <div class="title-article" id="title1">טיפים להאכלה נכונה</div>
+        <div class="descreption-article">
+          איך בוחרים את סוג המזון המתאים לכלב? מה מותר ומה אסור לו לאכול? ואיך
+          אפשר לרענן אותו בקיץ?
+        </div>
+        <div class="bttn-article"><button>קרא עוד</button></div>
+      </div>
+
+      <div class="article">
+        <div class="image-article">
+          <img src="/images/image-article3.jpg" alt="image-article3" />
+        </div>
+        <div class="title-article" id="title2">
+          אחת ולתמיד: מה אסור לכלבים לאכול?
+        </div>
+        <div class="descreption-article">
+          אוהבים לתת את העצמות הנותרות מהארוחה לכלב? מגניבים לו שוקולד מתחת
+          לשולחן האוכל? ייתכן שאתם מסכנים אותו
+        </div>
+        <div class="bttn-article"><button>קרא עוד</button></div>
+      </div>
+
+      <div class="article">
+        <div class="image-article">
+          <img src="/images/image-article2.jpg" alt="image-article2" />
+        </div>
+        <div class="title-article" id="title3">הכל מתחיל בחינוך נכון</div>
+        <div class="descreption-article">
+          כמה זמן כדאי להקדיש לאימון הכלב בכל יום, איזה ציוד יסייע לכם באילוף
+          ומה הקשר בין בחירת השם לחינוך מוצלח?
+        </div>
+        <div class="bttn-article"><button>קרא עוד</button></div>
+      </div>
+
+      <div class="article">
+        <div class="image-article">
+          <img
+            src="/images/image-article4.jpg"
+            alt="image-article4
+          "
+          />
+        </div>
+        <div class="title-article" id="title4">
+          חששות מחרדת נטישה עם סיום הסגר של הקורונה
+        </div>
+        <div class="descreption-article">
+          הסגר שהוטל על כולנו כחלק מתכנית התמודדות עם נגיף הקורונה, בין אם נרצה
+          ובין אם לא, סביר להניח שישנה את פני הדברים לנצח.
+        </div>
+        <div class="bttn-article"><button>קרא עוד</button></div>
+      </div>
+    </div>
+    <div class="container-link">
+      <a
+        href="https://spca.co.il/%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D-%D7%A2%D7%9C-%D7%9B%D7%9C%D7%91%D7%99%D7%9D/"
+        class="link"
+        target="article"
+        >למאמרים נוספים בנושאי כלבים</a
+      >
+    </div>
+    <div class="container-popUp">
+      <div class="popUp-content">
+        <div class="imageDiv">
+          <img
+            class="image-popUp"
+            src="/images/image-article1.jpg"
+            alt="imageArticle"
+          />
+        </div>
+        <button class="closeBttn">X</button>
+        <div class="textDiv">
+          <h1 class="popUp-title">כותרת</h1>
+          <p class="popUp-description">תיאור</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //-------
+      var bttnArticle = document.querySelectorAll(".bttn-article");
+      var containerPopUp = document.querySelector(".container-popUp");
+      var bttnClose = document.querySelector(".closeBttn");
+
+      var titlePopUp = document.querySelector(".popUp-title");
+      var descreptionPopUp = document.querySelector(".popUp-description");
+
+      // title article's
+      var title1 = document.getElementById("title1");
+      var title2 = document.getElementById("title2");
+      var title3 = document.getElementById("title3");
+      var title4 = document.getElementById("title4");
+
+      var imgPopUp = document.querySelector(".image-popUp");
+      var descreptionArticle = document.querySelectorAll(
+        ".descreption-article"
+      );
+      //close popUP bttn
+      bttnClose.addEventListener("click", () => {
+        containerPopUp.classList.remove("container-popUp-active");
+      });
+
+      //open popUP bttn
+      bttnArticle.forEach((bttn, index) => {
+        bttn.addEventListener("click", () => {
+          if (index == 0) {
+            titlePopUp.textContent = title1.textContent;
+            descreptionPopUp.textContent = descreptionArticle[0].textContent;
+            imgPopUp.src = "/images/image-article1.jpg";
+          } else if (index === 1) {
+            titlePopUp.textContent = title2.textContent;
+            descreptionPopUp.textContent = descreptionArticle[1].textContent;
+            imgPopUp.src = "/images/image-article3.jpg";
+          } else if (index == 2) {
+            titlePopUp.textContent = title3.textContent;
+            descreptionPopUp.textContent = descreptionArticle[2].textContent;
+            imgPopUp.src = "/images/image-article2.jpg";
+          } else {
+            titlePopUp.textContent = title4.textContent;
+            descreptionPopUp.textContent = "";
+            descreptionPopUp.textContent = descreptionArticle[3].textContent;
+            imgPopUp.src = "/images/image-article4.jpg";
+          }
+          containerPopUp.classList.add("container-popUp-active");
+        });
+      });
+    </script>
+  </body>
+</html>
