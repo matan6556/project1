@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>חנות-הכל לכלב</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      /*Header style-----*/
+
+      header {
+        height: 200px;
+        background-image: linear-gradient(45deg, #3f006e, #aa00dc);
+        border-radius: 0 0 25px 25px;
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Segoe UI;
+        position: relative;
+        font-size: 70px;
+        text-align: center;
+        color: white;
+      }
+      .secondaryTitle-header {
+        text-align: center;
+        color: white;
+        font-family: Segoe UI;
+        font-weight: normal;
+        font-size: 25px;
+      }
+
+      .title-ourProducts {
+        text-align: center;
+        color: #ee2d60;
+        direction: rtl;
+        margin: 20px;
+        font-family: Segoe UI;
+        font-weight: bold;
+      }
+      /*Style of SearchInput-----*/
+      .search-input input {
+        width: 28%;
+        min-width: 300px;
+        outline: none;
+        padding: 10px;
+        margin: 15px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      /*-------------------------*/
+
+      /*Style of menu-----*/
+
+      .list-menu {
+        list-style: none;
+        font-size: 20px;
+        font-family: Segoe UI;
+        color: white;
+        justify-content: flex-end;
+        display: flex;
+        text-align: right;
+      }
+      .list-menu a {
+        font-size: 25px;
+        padding: 30px;
+        text-decoration: none;
+        color: white;
+      }
+      .list-menu a:hover {
+        transition: 1s;
+        font-size: 30px;
+        border-bottom: 1px solid white;
+      }
+
+      /* END Style of menu + Header-----*/
+
+      /*  Style of container-store-----*/
+
+      .container-store {
+        background-color: rgb(240, 240, 240);
+        flex-wrap: wrap;
+        display: flex;
+        direction: rtl;
+        margin: 20px;
+        justify-content: space-evenly;
+      }
+      /* END Style of container-store-----*/
+
+      /*  Style of product-----*/
+      .product {
+        width: 220px;
+        margin: 15px;
+        align-items: center;
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+      }
+      .product-title {
+        animation: text 2s 1;
+        font-family: Segoe UI;
+        color: #45007a;
+      }
+      .product-image {
+        margin-top: 10px;
+        height: 150px;
+      }
+      .product-description {
+        animation: text 2s 1;
+        font-family: Segoe UI;
+        margin-top: 5px;
+      }
+
+      .bttn-price {
+        font-weight: bold;
+        font-size: 18px;
+        position: relative;
+        width: 180px;
+        height: 30px;
+        border: none;
+        outline: none;
+        display: block;
+        border-radius: 15px;
+        margin-top: 15px;
+        background-image: linear-gradient(45deg, #f8658c, #f16389, #f14774);
+
+        font-family: Segoe UI;
+        color: white;
+        cursor: pointer;
+      }
+      .bttn-price:hover {
+        transform: scale(1.1);
+      }
+      .icon-buy {
+        height: 18px;
+        position: absolute;
+        left: 20px;
+        top: 5px;
+      }
+      /* END Style of product-----*/
+
+      /* ANIMATION of product-----*/
+      @keyframes text {
+        0% {
+          margin-right: -50px;
+          color: #aa00dc;
+        }
+      }
+      /* -----------------------------*/
+      .cart {
+        position: relative;
+        float: left;
+        margin-top: 6px;
+        margin-left: 5px;
+      }
+      .cart img {
+        cursor: pointer;
+        height: 35px;
+      }
+      .circle-cart {
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 500px;
+        background-color: #ee2d60;
+        color: white;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+      }
+
+      /*-----reponsive*/
+
+      @media screen and (max-width: 733px) {
+        .list-menu a {
+          font-size: 21px;
+          padding: 20px;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+        }
+      }
+
+      @media screen and (max-width: 536px) {
+        .list-menu a {
+          font-size: 20px;
+          padding: 15px;
+          transition: 0.8s ease-in;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+          transition: 0.8s ease;
+        }
+        .cart {
+          position: absolute;
+          top: 150px;
+        }
+      }
+      @media screen and (max-width: 389px) {
+        .list-menu a {
+          font-size: 13px;
+          padding: 10px;
+          transition: 0.8s ease-in;
+        }
+        .main-title {
+          margin-top: 20px;
+          font-size: 50px;
+          transition: 0.8s ease-in;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <span class="cart">
+        <span class="circle-cart">1</span>
+        <img src="/images/cart.png" alt="cart" />
+      </span>
+      <ul class="list-menu">
+        <li class="list-item"><a href="ConatctUs.html">צור קשר</a></li>
+        <li class="list-item"><a href="Galery.html">גלריה </a></li>
+        <li class="list-item"><a href="About.html">אודות</a></li>
+        <li class="list-item"><a href="articels.html">מאמרים</a></li>
+        <li class="list-item"><a href="index.html">דף הבית</a></li>
+      </ul>
+      <h1 class="main-title">
+        הכל לכלב
+      </h1>
+      <h3 class="secondaryTitle-header">דף הבית</h3>
+    </header>
+
+    <div class="title-ourProducts">
+      <h1>המוצרים שלנו</h1>
+      <span class="search-input">
+        <input type="text" placeholder="חיפוש.." />
+      </span>
+    </div>
+
+    <div class="container-store">
+      <div class="product">
+        <h1 class="product-title">נאו מזון גורים</h1>
+        <p class="product-description">מזון יבש לכלב</p>
+        <img
+          class="product-image"
+          src="/images/dogFood2.png"
+          alt="imagOfProduct"
+        />
+        <button class="bttn-price">
+          119
+          <img src="/images/buy.png" alt="iconBuy" class="icon-buy" />
+        </button>
+      </div>
+
+      <div class="product">
+        <h1 class="product-title">עצם לכלב</h1>
+        <p class="product-description">עצם מיוחדת לכלב</p>
+        <img
+          class="product-image"
+          src="/images/boneImage.png"
+          alt="imagOfProduct"
+          style="height: 135px;"
+        />
+        <button class="bttn-price">
+          250
+          <img src="/images/buy.png" alt="iconBuy" class="icon-buy" />
+        </button>
+      </div>
+
+      <div class="product">
+        <h1 class="product-title">נאו מזון גורים</h1>
+        <p class="product-description">מזון יבש לכלב</p>
+        <img class="product-image" src="/images/dogFood2.png" />
+        <button class="bttn-price">
+          89
+          <img src="/images/buy.png" alt="iconBuy" class="icon-buy" />
+        </button>
+      </div>
+      <div class="product">
+        <h1 class="product-title">קערת מים</h1>
+        <p class="product-description">
+          עשויה מנירוסטה ועם בסיס מיוחד המונע החלקה.
+        </p>
+        <img class="product-image" src="/images/waterDog.png" />
+        <button class="bttn-price">
+          29
+          <img src="/images/buy.png" alt="iconBuy" class="icon-buy" />
+        </button>
+      </div>
+      <div class="product">
+        <h1 class="product-title">נאו מזון גורים</h1>
+        <p class="product-description">מזון יבש לכלב</p>
+        <img
+          class="product-image"
+          src="/images/dogFood2.png"
+          alt="imagOfProduct"
+        />
+        <button class="bttn-price">
+          220
+          <img src="/images/buy.png" alt="iconBuy" class="icon-buy" />
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var counter = 1;
+      var circleCart = document.querySelector(".circle-cart");
+      var btnPrice = document.querySelectorAll(".bttn-price");
+
+      for (let index = 0; index < btnPrice.length; index++) {
+        const element = btnPrice[index];
+        element.addEventListener("click", function (e) {
+          counter++;
+          alert("המוצר התווסף לעגלה");
+          circleCart.innerHTML = counter;
+        });
+      }
+    </script>
+  </body>
+</html>
